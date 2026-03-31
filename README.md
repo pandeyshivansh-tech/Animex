@@ -1,33 +1,31 @@
 # Animex
 
 ## Project Description
-Animex is a web application that allows users to explore anime using the Jikan API. Users can search for anime by name, view details such as title, rating, and type, and organize results using filtering and sorting features. The application dynamically fetches data using JavaScript and displays it on a responsive interface.
+Animex is a web application that allows users to explore anime using the Jikan API. It fetches real-time anime data and displays it in a structured and responsive layout. Users can view anime titles, ratings, and images dynamically.
 
 ## API Used
 Jikan API  
 https://jikan.moe/
 
+## Features Implemented
+- Fetches anime data from the Jikan API using fetch  
+- Displays anime in card format with image, title, and rating  
+- Dynamic rendering of data using JavaScript  
+- Loading indicator while data is being fetched  
+- Responsive layout using CSS Grid  
+
 ## Planned Features
-- Fetch and display anime data dynamically  
 - Search anime by name  
 - Filter anime by type (TV, Movie, etc.)  
 - Sort anime based on rating  
-- Responsive layout for different screen sizes  
-
-## Optional Features
-- Dark mode toggle  
-- Favorite anime using local storage  
-- Loading indicator during API calls  
+- Improve UI and add interactivity  
 
 ## Technologies Used
 - HTML  
 - CSS  
 - JavaScript (ES6)  
-- Fetch API  
-
-## How to Run
-1. Clone the repository  
-2. Open index.html in a browser  
+- Fetch API   
 
 ## Milestone Status
-Milestone 1 completed
+- Milestone 1: Completed on March 24
+- Milestone 2: Completed on March 31
