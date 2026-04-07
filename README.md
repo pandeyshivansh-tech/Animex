@@ -8,11 +8,14 @@ Jikan API
 https://jikan.moe/
 
 ## Features Implemented
-- Fetches anime data from the Jikan API using fetch  
-- Displays anime in card format with image, title, and rating  
-- Dynamic rendering of data using JavaScript  
-- Loading indicator while data is being fetched  
-- Responsive layout using CSS Grid  
+- Fetches anime data from the Jikan API using fetch
+- Displays anime in card format with image, title, and rating and type
+- Search functionality to find anime by name
+- Filter functionality based on anime type (TV, Movie)
+- Sort functionality based on rating (high to low, low to high)
+- Dynamic rendering using JavaScript and array methods (map, filter, sort)
+- Loading indicator during API calls
+- Responsive layout using CSS Grid
 
 ## Planned Features
 - Search anime by name  
@@ -29,3 +32,4 @@ https://jikan.moe/
 ## Milestone Status
 - Milestone 1: Completed on March 24
 - Milestone 2: Completed on March 31
+- Milestone 3: Completed on April 7

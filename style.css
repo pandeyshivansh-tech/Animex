@@ -1,32 +1,55 @@
-body {
+body{
   font-family: Arial, sans-serif;
   margin: 20px;
   background: #f5f5f5;
 }
 
-h1 {
+h1{
   text-align: center;
+  margin-bottom: 20px;
 }
 
-#anime-container {
+.controls{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+input, select{
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#anime-container{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 250px));
   gap: 20px;
+  justify-content: center;
 }
 
-.card {
+.card{
   background: white;
   padding: 10px;
   border-radius: 10px;
   text-align: center;
+  transition: transform 0.2s ease;
 }
 
-.card img {
+.card:hover{
+  transform: scale(1.05);
+}
+
+.card img{
   width: 100%;
   border-radius: 10px;
 }
 
-#loader {
+#loader{
   text-align: center;
   font-size: 20px;
+  margin-bottom: 20px;
 }
