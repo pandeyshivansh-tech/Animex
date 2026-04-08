@@ -15,13 +15,7 @@ https://jikan.moe/
 - Sort functionality based on rating (high to low, low to high)
 - Dynamic rendering using JavaScript and array methods (map, filter, sort)
 - Loading indicator during API calls
-- Responsive layout using CSS Grid
-
-## Planned Features
-- Search anime by name  
-- Filter anime by type (TV, Movie, etc.)  
-- Sort anime based on rating  
-- Improve UI and add interactivity  
+- Dark mode and light mode toggle
 
 ## Technologies Used
 - HTML  
@@ -32,4 +26,4 @@ https://jikan.moe/
 ## Milestone Status
 - Milestone 1: Completed on March 24
 - Milestone 2: Completed on March 31
-- Milestone 3: Completed on April 7
+- Milestone 3: Completed on April 8

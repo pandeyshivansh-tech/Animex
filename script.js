@@ -4,6 +4,7 @@ const loader = document.getElementById("loader")
 const searchInput = document.getElementById("search")
 const filterSelect = document.getElementById("filter")
 const sortSelect = document.getElementById("sort")
+const toggleBtn = document.getElementById("theme-toggle")
 
 let allAnime = []
 
@@ -38,6 +39,7 @@ function displayAnime(animeList){
       <h3>${anime.title}</h3>
       <p>Rating: ${anime.score}</p>
       <p>Type: ${anime.type}</p>`
+
     container.appendChild(card)
   })
 }
@@ -51,21 +53,33 @@ function handleControls(){
 
   filtered = filtered.filter(anime => anime.title.toLowerCase().includes(searchValue))
 
-  if(filterValue!=="all"){
+  if(filterValue !== "all"){
     filtered = filtered.filter(anime => anime.type === filterValue)
   }
 
-  if(sortValue==="high"){
-    filtered = filtered.sort((a,b) => b.score - a.score)
+  if(sortValue === "high"){
+    filtered = filtered.sort((a , b) => b.score - a.score)
   }
-  else if (sortValue==="low"){
-    filtered = filtered.sort((a,b) => a.score - b.score)
+  else if(sortValue === "low"){
+    filtered = filtered.sort((a , b) => a.score - b.score)
   }
+
   displayAnime(filtered)
 }
 
-searchInput.addEventListener("input", handleControls)
-filterSelect.addEventListener("change", handleControls)
-sortSelect.addEventListener("change", handleControls)
+toggleBtn.addEventListener("click" , () =>{
+  document.body.classList.toggle("light")
+
+  if(document.body.classList.contains("light")){
+    toggleBtn.innerText = "Dark Mode"
+  }
+  else{
+    toggleBtn.innerText = "Light Mode"
+  }
+})
+
+searchInput.addEventListener("input" , handleControls)
+filterSelect.addEventListener("change" , handleControls)
+sortSelect.addEventListener("change" , handleControls)
 
 fetchAnime()
