@@ -17,6 +17,7 @@ https://jikan.moe/
 - Dynamic rendering using JavaScript and array methods (map, filter, sort)
 - Loading indicator during API calls
 - Dark mode and light mode toggle
+- Footer with social media links
 
 ## Technologies Used
 - HTML  
