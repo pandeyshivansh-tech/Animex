@@ -39,7 +39,7 @@ function displayAnime(animeList){
     return
   }
 
-  animeList.map(anime=>{
+  animeList.map(anime => {
     const card = document.createElement("div")
     card.classList.add("card")
 
@@ -61,14 +61,10 @@ function handleControls(){
   const filterValue = filterSelect.value
   const sortValue = sortSelect.value
 
-  filtered = filtered.filter(anime=>
-    anime.title.toLowerCase().includes(searchValue)
-  )
+  filtered = filtered.filter(anime => anime.title.toLowerCase().includes(searchValue))
 
   if(filterValue !== "all"){
-    filtered = filtered.filter(anime=>
-      anime.type === filterValue
-    )
+    filtered = filtered.filter(anime => anime.type === filterValue)
   }
 
   if(sortValue === "high"){
@@ -82,7 +78,7 @@ function handleControls(){
 }
 
 // Dark/Light Mode toggle
-toggleBtn.addEventListener("click", ()=>{
+toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("light")
 
   if(document.body.classList.contains("light")){
