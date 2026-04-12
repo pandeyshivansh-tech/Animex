@@ -27,3 +27,7 @@ https://jikan.moe/
 - Milestone 1: Completed on March 24
 - Milestone 2: Completed on March 31
 - Milestone 3: Completed on April 8
+- Milestone 4: Completed on April 12
+
+## Deployed
+- https://animex-gamma-orcin.vercel.app
