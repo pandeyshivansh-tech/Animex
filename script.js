@@ -39,7 +39,7 @@ function displayAnime(animeList){
     return
   }
 
-  animeList.map(anime =>{
+  animeList.map(anime=>{
     const card = document.createElement("div")
     card.classList.add("card")
 
@@ -61,28 +61,28 @@ function handleControls(){
   const filterValue = filterSelect.value
   const sortValue = sortSelect.value
 
-  filtered = filtered.filter(anime =>
+  filtered = filtered.filter(anime=>
     anime.title.toLowerCase().includes(searchValue)
   )
 
   if(filterValue !== "all"){
-    filtered = filtered.filter(anime =>
+    filtered = filtered.filter(anime=>
       anime.type === filterValue
     )
   }
 
   if(sortValue === "high"){
-    filtered = filtered.sort((a , b) => b.score - a.score)
+    filtered = filtered.sort((a, b) => b.score-a.score)
   }
   else if(sortValue === "low"){
-    filtered = filtered.sort((a , b) => a.score - b.score)
+    filtered = filtered.sort((a, b) => a.score-b.score)
   }
 
   displayAnime(filtered)
 }
 
 // Dark/Light Mode toggle
-toggleBtn.addEventListener("click" , () =>{
+toggleBtn.addEventListener("click", ()=>{
   document.body.classList.toggle("light")
 
   if(document.body.classList.contains("light")){
@@ -93,9 +93,9 @@ toggleBtn.addEventListener("click" , () =>{
 })
 
 // event listeners
-searchInput.addEventListener("input" , handleControls)
-filterSelect.addEventListener("change" , handleControls)
-sortSelect.addEventListener("change" , handleControls)
+searchInput.addEventListener("input", handleControls)
+filterSelect.addEventListener("change", handleControls)
+sortSelect.addEventListener("change", handleControls)
 
 // starting call
 fetchAnime()
