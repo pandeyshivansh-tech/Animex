@@ -8,9 +8,11 @@ const toggleBtn = document.getElementById("theme-toggle")
 
 let allAnime = []
 
+// fetch anime data
 async function fetchAnime(){
   try{
     loader.style.display = "block"
+    container.style.display = "none"
 
     const res = await fetch("https://api.jikan.moe/v4/top/anime")
     const data = await res.json()
@@ -20,6 +22,7 @@ async function fetchAnime(){
     displayAnime(allAnime)
 
     loader.style.display = "none"
+    container.style.display = "grid"
   }
   catch(error){
     console.log(error)
@@ -27,8 +30,14 @@ async function fetchAnime(){
   }
 }
 
+// display anime cards
 function displayAnime(animeList){
   container.innerHTML = ""
+
+  if(animeList.length === 0){
+    container.innerHTML = "<h2>No results found</h2>"
+    return
+  }
 
   animeList.map(anime =>{
     const card = document.createElement("div")
@@ -44,17 +53,22 @@ function displayAnime(animeList){
   })
 }
 
+// search, filter and sort
 function handleControls(){
-  let filtered = allAnime
+  let filtered = [...allAnime]
 
   const searchValue = searchInput.value.toLowerCase()
   const filterValue = filterSelect.value
   const sortValue = sortSelect.value
 
-  filtered = filtered.filter(anime => anime.title.toLowerCase().includes(searchValue))
+  filtered = filtered.filter(anime =>
+    anime.title.toLowerCase().includes(searchValue)
+  )
 
   if(filterValue !== "all"){
-    filtered = filtered.filter(anime => anime.type === filterValue)
+    filtered = filtered.filter(anime =>
+      anime.type === filterValue
+    )
   }
 
   if(sortValue === "high"){
@@ -67,19 +81,21 @@ function handleControls(){
   displayAnime(filtered)
 }
 
+// Dark/Light Mode toggle
 toggleBtn.addEventListener("click" , () =>{
   document.body.classList.toggle("light")
 
   if(document.body.classList.contains("light")){
     toggleBtn.innerText = "Dark Mode"
-  }
-  else{
+  } else{
     toggleBtn.innerText = "Light Mode"
   }
 })
 
+// event listeners
 searchInput.addEventListener("input" , handleControls)
 filterSelect.addEventListener("change" , handleControls)
 sortSelect.addEventListener("change" , handleControls)
 
+// starting call
 fetchAnime()
