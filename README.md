@@ -1,4 +1,5 @@
 # Animex
+By Shivansh Pandey
 
 ## Project Description
 Animex is a web application that allows users to explore anime using the Jikan API. It fetches real-time anime data and displays it in a structured and responsive layout. Users can view anime titles, ratings, and images dynamically.

@@ -27,7 +27,7 @@ top:15px;
 padding:8px 12px;
 border:none;
 border-radius:6px;
-background:#f97316;
+background:#F47521;
 color:white;
 cursor:pointer;
 }
@@ -92,7 +92,7 @@ color:grey;
 text-align:center;
 font-size:18px;
 padding:40px;
-color:#f97316;
+color:#F47521;
 }
 
 .light{
@@ -118,4 +118,51 @@ background:white;
 .light #theme-toggle{
 background:#0f172a;
 color:white;
+}
+
+/* footer */
+footer{
+text-align:center;
+padding:20px;
+border-top:1px solid #1e293b;
+background:#020617;
+margin-top:20px;
+}
+
+footer p{
+margin-bottom:10px;
+font-size:16px;
+color:grey;
+}
+
+.socials{
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+.socials a{
+color:white;
+font-size:26px;
+transition:0.3s;
+}
+
+.socials a:hover{
+color:#F47521;
+transform:scale(1.25);
+}
+
+/* light mode footer */
+.light footer{
+background:white;
+border-top:1px solid #ccc;
+}
+
+.light .socials a{
+color:black;
+}
+
+.light .socials a:hover{
+color:#F47521;
+transform:scale(1.3);
 }
