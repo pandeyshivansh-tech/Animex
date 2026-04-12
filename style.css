@@ -120,7 +120,7 @@ background:#0f172a;
 color:white;
 }
 
-/* footer */
+/* Socials */
 footer{
 text-align:center;
 padding:20px;
@@ -152,7 +152,6 @@ color:#F47521;
 transform:scale(1.25);
 }
 
-/* light mode footer */
 .light footer{
 background:white;
 border-top:1px solid #ccc;
