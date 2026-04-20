@@ -8,28 +8,44 @@ transition:0.3s;
 
 header{
 background:#020617;
-padding:15px;
-text-align:center;
+padding:15px 20px;
+display:grid;
+grid-template-columns:1fr auto 1fr;
+align-items:center;
 border-bottom:1px solid #1e293b;
-position:relative;
 }
 
 h1{
 margin:0;
 color:#F47521;
 letter-spacing:2px;
+grid-column:2;
+text-align:center;
 }
 
 #theme-toggle{
-position:absolute;
-right:20px;
-top:15px;
+grid-column:3;
+justify-self:end;
 padding:8px 12px;
 border:none;
 border-radius:6px;
 background:#F47521;
 color:white;
 cursor:pointer;
+}
+
+@media (max-width: 400px) {
+  header {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  h1 {
+    grid-column: 1;
+  }
+  #theme-toggle {
+    grid-column: 1;
+    justify-self: center;
+  }
 }
 
 .controls{
