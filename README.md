@@ -32,4 +32,4 @@ https://jikan.moe/
 - Milestone 4: Completed on April 12
 
 ## Deployed
-- https://animex-gamma-orcin.vercel.app
+- https://animex-jikan.vercel.app/
